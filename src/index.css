@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --color-background: oklch(0.1 0 0);
+  --color-foreground: oklch(0.92 0 0);
+  --color-card: oklch(0.13 0 0);
+  --color-border: oklch(1 0 0 / 8%);
+  --color-muted-foreground: oklch(0.55 0 0);
+  --color-acid: #D4FF00;
+  --color-acid-dim: #A3C400;
+  --color-steel: #1A1A1A;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+:root,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+    border-radius: 0 !important;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    overflow-x: hidden;
+  }
+}
